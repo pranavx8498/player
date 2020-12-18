@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body bgcolor='#80dfff'>
+    <div>
+    <centre>
+        <form action="{{ url_for('predict')}}"method="post"></form>
+        <h1>   Player Rating   </h1>
+    <pre>
+                                                             
+     <input type="text" placeholder="Age" name="age">      <input type="text" placeholder="Weight in kgs" name="weight">         <label for="work_rate">WORK-RATE</label><select name='work_rate' id='wr'>           
+<option value='l/l'>LOW/LOW</option>
+<option value='l/m'>LOW/MEDIUM</option>
+<option value='l/h'>LOW/HIGH</option>
+<option value='m/l'>MEDIUM/LOW</option>  
+<option value='m/m'>MEDIUM/MEDIUM</option>
+<option value='m/h'>MEDIUM/HIGH</option>
+<option value='h/l'>HIGH/LOW</option>
+<option value='h/m'>HIGH/MEDIUM</option>
+<option value='h/h'>HIGH/HIGH</option>
+</select>
+    
+    
+    
+    
+      <input type="text" placeholder="MENTALITY" name="MENTALITY">                    <label for='foot'>Player-FOOT</FOOT><select name='foot' id='foot'><option value='R'>RIGHT</option> <option value='L'>LEFT</option></select>
+                                                                       
+     
+                                                                                                    
+     
+    <input type="text" placeholder="MIDFILED" name="MIDFILED">       <input type="text" placeholder="ATTACK" name="ATTACK">              <input type="text" placeholder="DEFENCE"  name="DEFENCE">
+    
+    
+          
+                                                                        
+    
+                                                     <button type="submit" id='sub'> SUBMIT </button>
+                                                     
+</pre>
+</form> 
+                                                            <marquee><br><br><h3>{{ prediction_text }}<h3></marquee>
+</centre>
+</body>
+<br>
+<br>
+</div>
+</body>
+</html>
